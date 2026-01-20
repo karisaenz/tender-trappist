@@ -2,15 +2,170 @@
 
 ---
 
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<head>
+    <meta charset="UTF-8">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="generator" content={Astro.generator} />
+    <meta name="description" content="La mejor pizzeria de Quito, Ecuador en el barrio tradicional de San Marcos. Disfruta del centro histórico de Quito, mientras gozas de un delicioso cóctel y una comida Italiana fresca y autentica. ¡Aprovecha la magnifica vista hacia el Panecillo!">
+    <meta name="keywords" content="pizza restaurante Quito, best pizza Quito, comida Italiana Quito, pizzeria San Marcos, Bocanada Pizza, la mejor pizza centro de Quito, la mejor pizza Quito,">
+    <title>Bocanada Pizza - La mejor pizzeria de Quito en el barrio tradicional de San Marcos</title>
+    
+    <!-- JSON-LD Structured Data for Local Business (Restaurant) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Bocanada Pizza, café, cultura",
+      "url": "https://bocanadapizza.com.ec",
+      "image": "https://bocanadapizza.com.ec/images/pizza-hero.webp",
+      "description": "La mejor pizza artesanal en el centro de Quito, Ecuador en el barrio tradicional de San Marcos. Disfruta del centro histórico de Quito, mientras gozas de una deliciosa pizza, exquisito cóctel, una comida Italiana fresca y sabores ecuatorianos con vistas únicas. ¡Aprovecha la magnifica vista hacia el Panecillo!",
+      "priceRange": "$$",
+      "servesCuisine": "Comida italiana, Pizza, Café, Cócteles",
+      "telephone": "+593-98-953-8444",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Junín E2-68, San Marcos",
+        "addressLocality": "Quito",
+        "addressRegion": "Pichincha",
+        "postalCode": "170130",
+        "addressCountry": "EC"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -0.2200,
+        "longitude": -78.5125
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday"],
+          "opens": "16:00",
+          "closes": "22:00"
+        },        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "13:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday"],
+          "opens": "12:00",
+          "closes": "17:00"
+        }
+      ],
+      "hasMenu": {
+		"@type": "Menu",
+		"name": "Menú Principal Bocanada Pizza",
+		"description": "Pizzas artesanales con masa napolitana y toques ecuatorianos",
+		"offers": {
+			"@type": "Offer",
+			"availability": "https://schema.org/InStock"
+		},
+		"hasMenuItem": [
+			{
+				"@type": "MenuItem",
+				"name": "Pizza Hornado Ecuatoriano",
+				"description": "Base de tomate, mozzarella, hornado crocante, mote, aguacate fresco y salsas criollas. Sabor auténtico ecuatoriano en cada bocado.",
+				"image": "https://bocanadapizza.com.ec/images/pizza-hornado.webp",
+				"offers": {
+				"@type": "Offer",
+				"price": "14.99",
+				"priceCurrency": "USD",
+				"eligibleRegion": "EC"
+				},
+				"suitableForDiet": "https://schema.org/NonVegetarianDiet"
+			},
+			{
+				"@type": "MenuItem",
+				"name": "Pizza Plátano Maduro & Chorizo",
+				"description": "Plátano maduro caramelizado, chorizo artesanal ecuatoriano, queso mozzarella y toque de cilantro. Dulce y salado en perfecta armonía.",
+				"image": "https://bocanadapizza.com.ec/images/pizza-platano.webp",
+				"offers": {
+				"@type": "Offer",
+				"price": "13.50",
+				"priceCurrency": "USD"
+				}
+			},
+			{
+				"@type": "MenuItem",
+				"name": "Pizza Margherita Clásica",
+				"description": "Salsa de tomate natural, mozzarella fresca, albahaca y aceite de oliva extra virgen. Simple y perfecta.",
+				"image": "https://bocanadapizza.com.ec/images/margherita.webp",
+				"offers": {
+				"@type": "Offer",
+				"price": "12.00",
+				"priceCurrency": "USD"
+				},
+				"suitableForDiet": "https://schema.org/VegetarianDiet"
+			}
+		]
+  	},
+	  "sameAs": [
+		"https://www.instagram.com/bocanadapizza",
+		"https://www.facebook.com/bocanadapizza",  
+		"https://www.tripadvisor.com/Restaurant_Review-g294308-d[ID].html"  
+	  ],
+      "acceptsReservations": false
+    }
+    </script>
+    
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        header { background: #cc0000; color: white; text-align: center; padding: 50px 20px; }
+        section { max-width: 800px; margin: 20px auto; padding: 20px; }
+        h1, h2 { text-align: center; }
+        .nap { font-weight: bold; text-align: center; background: #f8f8f8; padding: 20px; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 10px 0; }
+    </style>
+</head>
+<body>
+
+    <header>
+      <img 
+        src="images/bocanada-pizza-san-marcos-quito-entrada.webp" 
+        alt="Deliciosa pizza en Bocanada Pizzeria, San Marcos, Quito" 
+        loading="lazy"
+        width="1200" 
+        height="600"
+        style="width: 100%; height: auto; display: block;"
+    >
+        <h1>Bocanada Pizzeria</h1>
+        <p>La mejor pizzeria de Quito, Ecuador en el barrio tradicional de San Marcos.</p>
+    </header>
+
+    <section class="nap">
+        <p>Bocanada Pizzeria</p>
+        <p>Junín E2-68, San Marcos, Quito, Ecuador</p>
+        <p>Telefono: <a href="tel:+593989538444">0989538444</a></p>
+        <p>Abierto: Lunes-Martes 16:00-22:00 | Miércoles-Sábado 13:00-22:00 | Domingo 12:00-17:00</p>
+    </section>
+
+    <section>
+        <h2>Quienes sómos</h2>
+        <p>Bocanada Pizzeria es la mejor pizzeria de Quito, Ecuador en el barrio tradicional de San Marcos. Disfruta del centro histórico de Quito, mientras gozas de un delicioso cóctel y una comida Italiana fresca y autentica. ¡Aprovecha la magnifica vista hacia el Panecillo! </p>
+        <p>Pizza, comida italiana, café, cultura, y cócteles.</p>
+    </section>
+
+    <section>
+        <h2>Sample Menu</h2>
+        <ul>
+            <li>Margherita Pizza - $12.99</li>
+            <li>Pepperoni Feast - $14.99</li>
+            <li>Veggie Supreme - $13.99</li>
+            <li>Garlic Bread - $4.99</li>
+        </ul>
+        <p>Full menu coming soon!</p>
+    </section>
+
+    <section>
+        <h2>Contact Us</h2>
+        <p>Call us at +1-555-123-4567 or visit us in [City] for the best pizza experience!</p>
+    </section>
+
+</body>
 </html>
