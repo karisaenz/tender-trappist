@@ -1,0 +1,129 @@
+---
+const { title = "Bocanada Pizza, café, cultura" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="generator" content={Astro.generator} />
+    <meta name="description" content="La mejor pizzeria de Quito, Ecuador en el barrio tradicional de San Marcos. Disfruta del centro histórico de Quito, mientras gozas de un delicioso cóctel y una comida Italiana fresca y autentica. ¡Aprovecha la magnifica vista hacia el Panecillo!">
+    <meta name="keywords" content="pizza restaurante Quito, best pizza Quito, comida Italiana Quito, pizzeria San Marcos, Bocanada Pizza, la mejor pizza centro de Quito, la mejor pizza Quito,">
+    <title>{title}</title>
+    <slot name="head" />
+    <!-- JSON-LD Structured Data for Local Business (Restaurant) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Bocanada Pizza, café, cultura",
+      "url": "https://bocanadapizza.com.ec",
+      "image": "https://bocanadapizza.com.ec/images/bocanada-pizza-icono-principal.webp",
+      "description": "La mejor pizza artesanal en el centro de Quito, Ecuador en el barrio tradicional de San Marcos. Disfruta del centro histórico de Quito, mientras gozas de una deliciosa pizza, exquisito cóctel, una comida Italiana fresca y sabores ecuatorianos con vistas únicas. ¡Aprovecha la magnifica vista hacia el Panecillo!",
+      "priceRange": "$$",
+      "servesCuisine": "Comida italiana, Pizza, Café, Cócteles",
+      "telephone": "+593-98-953-8444",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Junín E2-68, San Marcos",
+        "addressLocality": "Quito",
+        "addressRegion": "Pichincha",
+        "postalCode": "170130",
+        "addressCountry": "EC"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -0.2200,
+        "longitude": -78.5125
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday"],
+          "opens": "16:00",
+          "closes": "22:00"
+        },        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "13:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday"],
+          "opens": "12:00",
+          "closes": "17:00"
+        }
+      ],
+      "hasMenu": {
+		"@type": "Menu",
+		"name": "Menú Principal Bocanada Pizza",
+		"description": "Pizzas artesanales con masa napolitana y toques ecuatorianos",
+		"offers": {
+			"@type": "Offer",
+			"availability": "https://schema.org/InStock"
+		},
+		"hasMenuItem": [
+			{
+				"@type": "MenuItem",
+				"name": "Pizza Hornado Ecuatoriano",
+				"description": "Base de tomate, mozzarella, hornado crocante, mote, aguacate fresco y salsas criollas. Sabor auténtico ecuatoriano en cada bocado.",
+				"image": "https://bocanadapizza.com.ec/images/pizza-hornado.webp",
+				"offers": {
+				"@type": "Offer",
+				"price": "14.99",
+				"priceCurrency": "USD",
+				"eligibleRegion": "EC"
+				},
+				"suitableForDiet": "https://schema.org/NonVegetarianDiet"
+			},
+			{
+				"@type": "MenuItem",
+				"name": "Pizza Plátano Maduro & Chorizo",
+				"description": "Plátano maduro caramelizado, chorizo artesanal ecuatoriano, queso mozzarella y toque de cilantro. Dulce y salado en perfecta armonía.",
+				"image": "https://bocanadapizza.com.ec/images/pizza-platano.webp",
+				"offers": {
+				"@type": "Offer",
+				"price": "13.50",
+				"priceCurrency": "USD"
+				}
+			},
+			{
+				"@type": "MenuItem",
+				"name": "Pizza Margherita Clásica",
+				"description": "Salsa de tomate natural, mozzarella fresca, albahaca y aceite de oliva extra virgen. Simple y perfecta.",
+				"image": "https://bocanadapizza.com.ec/images/margherita.webp",
+				"offers": {
+				"@type": "Offer",
+				"price": "12.00",
+				"priceCurrency": "USD"
+				},
+				"suitableForDiet": "https://schema.org/VegetarianDiet"
+			}
+		]
+  	},
+	  "sameAs": [
+		"https://www.instagram.com/bocanadapizza",
+		"https://www.facebook.com/bocanadapizza",
+		"https://www.tripadvisor.com.mx/Restaurant_Review-g294308-d13339691-Reviews-Bocanada-Quito_Pichincha_Province.html"
+	  ],
+      "acceptsReservations": false
+    }
+    </script>
+    
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+        header { background: #cc9c00; color: white; text-align: center; padding: 50px 20px; }
+        section { max-width: 800px; margin: 20px auto; padding: 20px; }
+        h1, h2 { text-align: center; }
+        .nap { font-weight: bold; text-align: center; background: #f8f8f8; padding: 20px; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 10px 0; }
+    </style>
+</head>
+  <body>
+    <slot />
+  </body>
+</html>
